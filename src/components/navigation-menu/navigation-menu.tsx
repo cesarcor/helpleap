@@ -9,6 +9,9 @@ const NavigationMenu = () => {
 					<a href='#'>Conversations</a>
 				</li>
 				<li className={`${styles.nav_menu__list_item}`}>
+					<a href='#'>Customers</a>
+				</li>
+				<li className={`${styles.nav_menu__list_item}`}>
 					<a href='#'>Trends</a>
 				</li>
 				<li className={`${styles.nav_menu__list_item}`}>
