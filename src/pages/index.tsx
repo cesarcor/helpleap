@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import styles from '@/styles/Home.module.scss';
 import Layout from '@/components/layout/layout';
-import TicketList from '@/components/ticket-list/ticket-list';
+import TicketList from '@/components/tickets/ticket-list/ticket-list';
 
 export default function Home() {
 	return (
