@@ -4,8 +4,12 @@
 	--text-color: #6c6f77;
 	--gray-blue: #b6bdcf;
 	--white: #ffffff;
-	--light-red: #ffd0d0;
+	--light-orange: #fff4e9;
+	--light-red: #ffdfdf;
 	--dark-red: #ff3100;
+	--info-blue: #3b7bff;
+	--dark-blue: #20465b;
+	--green: #06a400;
 }
 
 body {
@@ -94,7 +98,9 @@ main {
 }
 
 body {
-	line-height: 1;
+	line-height: 1.2;
+	font-size: 16px;
+	letter-spacing: 0.5px;
 }
 
 h1,
