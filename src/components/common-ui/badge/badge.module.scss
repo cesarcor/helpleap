@@ -1,0 +1,28 @@
+.badge {
+	border: 1px solid #3b7bff;
+	border-radius: 15px;
+	color: #3b7bff;
+	font-size: 12px;
+	padding: 5px 10px;
+	display: inline-block;
+
+	&.badge__high {
+		border: 1px solid var(--dark-red);
+		color: var(--dark-red);
+	}
+
+	&.badge__low {
+		border: 1px solid var(--green);
+		color: var(--green);
+	}
+
+	&.badge__info {
+		border: 1px solid var(--info-blue);
+		color: var(--info-blue);
+	}
+
+	&.badge__neutral {
+		border: 1px solid var(--gray-blue);
+		color: var(--gray-blue);
+	}
+}
