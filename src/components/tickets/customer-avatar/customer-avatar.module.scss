@@ -1,0 +1,14 @@
+.customer_avatar {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+
+	&_name {
+		font-size: 0.8em;
+		text-align: center;
+		color: var(--dark-blue);
+		margin-top: 5px;
+		width: 100%;
+	}
+}
