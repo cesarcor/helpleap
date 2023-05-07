@@ -1,0 +1,17 @@
+.ticket_viewing {
+	display: flex;
+	align-items: center;
+
+	span {
+		font-size: 0.75em;
+	}
+
+	.viewing_list {
+		margin: 0 0 0 5px;
+
+		li {
+			display: inline-block;
+			margin: 0 5px 0 0;
+		}
+	}
+}
