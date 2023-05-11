@@ -9,6 +9,8 @@ const SingleTicketMessaging = () => {
 				<div className={styles.messaging_stream}>
 					<Message origin='incoming' />
 					<Message origin='outgoing' />
+					<Message origin='incoming' />
+					<Message origin='outgoing' />
 				</div>
 				<Response />
 			</div>

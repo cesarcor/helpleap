@@ -11,8 +11,14 @@ const TicketStatusControl = () => {
 				<Button text='Follow' type='default' />
 			</div>
 			<div className={styles.right}>
-				<Select />
-				<Select />
+				<Select
+					selectTitle='Priority'
+					selectOptions={['High', 'Medium', 'Low']}
+				/>
+				<Select
+					selectTitle='Status'
+					selectOptions={['Open', 'Pending', 'Closed']}
+				/>
 			</div>
 		</div>
 	);
