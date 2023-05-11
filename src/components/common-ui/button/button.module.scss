@@ -1,0 +1,30 @@
+.button {
+	outline: none;
+	padding: 6px 16px;
+	cursor: pointer;
+	border-radius: 4px;
+
+	&__default {
+		border: 1px solid var(--primary-orange);
+		color: var(--primary-orange);
+		background-color: transparent;
+		transition: background-color 0.3s ease-out;
+
+		&:hover {
+			background-color: var(--primary-orange);
+			color: var(--white);
+			transition: background-color 0.3s ease;
+		}
+	}
+
+	&__white {
+		border: 1px solid var(--white);
+		color: var(--white);
+		background-color: transparent;
+
+		&:hover {
+			background-color: var(--white);
+			color: var(--dark-blue);
+		}
+	}
+}
