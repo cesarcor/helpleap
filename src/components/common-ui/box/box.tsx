@@ -1,8 +1,8 @@
 import styles from './box.module.scss';
 
 interface BoxProps {
-	min_height: string | number;
-	children?: React.ReactNode;
+	min_height?: string | number;
+	children: React.ReactNode;
 }
 
 const Box = (props: BoxProps) => {
