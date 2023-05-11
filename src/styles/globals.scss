@@ -9,7 +9,10 @@
 	--dark-red: #ff3100;
 	--info-blue: #3b7bff;
 	--dark-blue: #20465b;
+	--sky-blue: #1ad0f2;
+	--light-sky-blue: #f3fdff;
 	--green: #06a400;
+	--light-green: #f6fff5;
 }
 
 body {
@@ -112,6 +115,10 @@ h2 {
 a {
 	text-decoration: none;
 	color: inherit;
+}
+
+p {
+	margin-bottom: 15px;
 }
 
 ol,
