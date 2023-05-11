@@ -4,7 +4,8 @@
 	color: #3b7bff;
 	font-size: 12px;
 	padding: 5px 10px;
-	display: inline-block;
+	display: inline-flex;
+	align-items: center;
 
 	&.badge__high {
 		border: 1px solid var(--dark-red);
