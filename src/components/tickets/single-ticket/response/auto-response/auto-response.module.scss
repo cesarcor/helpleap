@@ -1,0 +1,19 @@
+.auto_response {
+	border: 1px solid var(--gray-blue);
+	height: 100%;
+
+	&_status {
+		background-color: var(--green);
+		padding: 10px;
+		color: #ffffff;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&_content {
+		padding: 15px;
+		background-color: var(--gray-blue);
+		height: calc(100% - 49px);
+		overflow-y: scroll;
+	}
+}

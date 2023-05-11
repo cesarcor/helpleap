@@ -1,0 +1,14 @@
+.message_item {
+	display: flex;
+	column-gap: 15px;
+	align-items: center;
+	margin: 1.5em 0;
+
+	&.message_item__incoming {
+		flex-direction: row-reverse;
+	}
+
+	&.message_item__outgoing {
+		flex-direction: row;
+	}
+}

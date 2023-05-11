@@ -1,0 +1,18 @@
+.single_ticket_header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 3rem;
+	border-bottom: 1px solid var(--gray-blue);
+
+	&__subject {
+		font-size: 1.1rem;
+		color: var(--dark-blue);
+	}
+
+	&__badges {
+		display: flex;
+		align-items: center;
+		column-gap: 10px;
+	}
+}

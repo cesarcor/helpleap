@@ -1,0 +1,12 @@
+.single_ticket_messaging {
+	&__container {
+		height: calc(100vh - 210px);
+	}
+
+	.messaging_stream {
+		overflow-y: scroll;
+		padding: 0 10px;
+		height: 60%;
+		min-height: 350px;
+	}
+}

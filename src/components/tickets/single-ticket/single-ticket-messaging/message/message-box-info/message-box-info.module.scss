@@ -1,0 +1,12 @@
+.message_box_info {
+	font-size: 0.8em;
+
+	div {
+		font-size: 100%;
+		margin-bottom: 5px;
+	}
+
+	&.message_box_info__outgoing {
+		text-align: right;
+	}
+}
