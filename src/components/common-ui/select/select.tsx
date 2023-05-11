@@ -1,7 +1,12 @@
 import { useState, useEffect, useRef } from 'react';
 import styles from './select.module.scss';
 
-const Select = () => {
+interface SelectProps {
+	selectTitle: string;
+	selectOptions: string[];
+}
+
+const Select = (props: SelectProps) => {
 	const [isOpen, setIsOpen] = useState<boolean>(false);
 	const [selectedOption, setSelectedOption] = useState<string>('Select');
 	const selectRef = useRef<HTMLDivElement>(null);
@@ -29,7 +34,7 @@ const Select = () => {
 				className={styles.select_field_input}
 				onClick={() => setIsOpen(!isOpen)}
 			>
-				<span className={styles.select_title}>Priority: </span>
+				<span className={styles.select_title}>{props.selectTitle}: </span>
 				<span className={styles.select_value}>{selectedOption}</span>
 			</div>
 			<div
@@ -38,9 +43,11 @@ const Select = () => {
 				}`}
 			>
 				<ul className={styles.options_list}>
-					<li onClick={() => setSelectedOption('High')}>High</li>
-					<li onClick={() => setSelectedOption('Medium')}>Medium</li>
-					<li onClick={() => setSelectedOption('Low')}>Low</li>
+					{props.selectOptions.map((option, index) => (
+						<li key={index} onClick={() => setSelectedOption(option)}>
+							{option}
+						</li>
+					))}
 				</ul>
 			</div>
 		</div>

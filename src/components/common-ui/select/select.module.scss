@@ -5,9 +5,14 @@
 	&_input {
 		border: 1px solid var(--gray-blue);
 		border-radius: 4px;
-		padding: 4px 10px;
+		padding: 6px 10px;
 		outline: none;
 		cursor: pointer;
+
+		.select_title {
+			color: var(--gray-blue);
+			font-weight: 700;
+		}
 	}
 
 	.options_box {
@@ -19,10 +24,11 @@
 		border-left: 1px solid var(--gray-blue);
 		border-right: 1px solid var(--gray-blue);
 		border-bottom: 1px solid var(--gray-blue);
+		z-index: 10;
 
 		.options_list {
 			li {
-				padding: 5px 0;
+				padding: 5px 5px;
 				cursor: pointer;
 				&:hover {
 					background-color: var(--gray-blue);
