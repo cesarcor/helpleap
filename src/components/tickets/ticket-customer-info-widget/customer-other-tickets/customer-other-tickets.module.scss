@@ -1,0 +1,31 @@
+.other_tickets {
+	h2 {
+		margin-bottom: 10px;
+	}
+
+	.other_tickets_list {
+		&__item {
+			.ticket_item {
+				display: flex;
+				column-gap: 10px;
+				align-items: center;
+				padding: 10px 0;
+
+				h3 {
+					font-size: 0.8em;
+					font-weight: 500;
+				}
+
+				&:hover {
+					h3 {
+						color: var(--primary-orange);
+					}
+				}
+			}
+
+			&:not(:last-child) {
+				border-bottom: 1px solid var(--gray-blue);
+			}
+		}
+	}
+}
