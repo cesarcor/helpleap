@@ -5,6 +5,8 @@ import classNames from 'classnames';
 interface BadgeProps {
 	text: string;
 	type?: string | undefined;
+	shapeSquare?: boolean | undefined;
+	size?: string | undefined;
 }
 
 const Badge = (props: BadgeProps) => {
@@ -16,7 +18,19 @@ const Badge = (props: BadgeProps) => {
 		{ [styles.badge__info]: props.type === 'info' }
 	);
 
-	return <span className={`${styles.badge} ${badgeType}`}>{props.text}</span>;
+	const badgeShape = classNames({
+		[styles.badge_shape__square]: props.shapeSquare === true,
+	});
+
+	const badgeSize = classNames({
+		[styles.badge_size__sm]: props.size === 'sm',
+	});
+
+	return (
+		<span className={`${styles.badge} ${badgeType} ${badgeShape} ${badgeSize}`}>
+			{props.text}
+		</span>
+	);
 };
 
 export default Badge;

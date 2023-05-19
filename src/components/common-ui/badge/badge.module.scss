@@ -1,11 +1,21 @@
 .badge {
 	border: 1px solid #3b7bff;
-	border-radius: 15px;
 	color: #3b7bff;
 	font-size: 12px;
 	padding: 5px 10px;
+	border-radius: 15px;
 	display: inline-flex;
 	align-items: center;
+
+	&.badge_shape__square {
+		border-radius: 0;
+	}
+
+	&.badge_size__sm {
+		font-size: 8px;
+		font-weight: 500;
+		padding: 3px 5px;
+	}
 
 	&.badge__high {
 		border: 1px solid var(--dark-red);
