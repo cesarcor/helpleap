@@ -1,5 +1,7 @@
 .secondary_sidebar {
 	flex-grow: 1;
+	flex-basis: 25vw;
+	min-width: 300px;
 
 	&__container {
 		height: 80vh;
