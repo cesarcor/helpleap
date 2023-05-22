@@ -1,0 +1,11 @@
+.search_form {
+	width: 250px;
+	.search_input {
+		font-size: 0.9em;
+		border: 1px solid var(--gray-blue);
+		padding: 5px;
+		outline: none;
+		border-radius: 4px;
+		width: 100%;
+	}
+}
