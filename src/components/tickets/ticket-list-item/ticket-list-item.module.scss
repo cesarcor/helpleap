@@ -51,16 +51,56 @@
 	&.ticket_item_intervention_status__medium {
 		background-color: var(--light-orange);
 		border: 1px solid var(--primary-orange);
+		transition: border-color 0.7s, background-color 0.7s;
+
+		&:hover {
+			animation: pulseOrange 1s infinite;
+		}
 	}
 
 	&.ticket_item_intervention_status__high {
 		background-color: var(--light-red);
 		border: 1px solid var(--dark-red);
+		transition: border-color 0.7s, background-color 0.7s;
+
+		&:hover {
+			animation: pulseRed 1s infinite;
+		}
 	}
 
 	&:hover {
 		background-color: #edfffc; //temporary
 		border: 1px solid var(--info-blue);
 		transition: all 0.2s ease-in-out;
+	}
+}
+
+@keyframes pulseOrange {
+	0% {
+		border-color: var(--info-blue);
+		background-color: #edfffc;
+	}
+	50% {
+		border-color: var(--primary-orange);
+		background-color: var(--light-orange);
+	}
+	100% {
+		border-color: var(--info-blue);
+		background-color: #edfffc;
+	}
+}
+
+@keyframes pulseRed {
+	0% {
+		border-color: var(--info-blue);
+		background-color: #edfffc;
+	}
+	50% {
+		border-color: var(--dark-red);
+		background-color: var(--light-red);
+	}
+	100% {
+		border-color: var(--info-blue);
+		background-color: #edfffc;
 	}
 }
