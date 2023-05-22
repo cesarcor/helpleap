@@ -1,7 +1,17 @@
 .main_sidebar {
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
+	flex-direction: column;
+	flex: 0 0 1fr;
 	border-right: 1px solid var(--gray-blue);
-	padding: 15px;
+	padding: 15px 15px 15px 0;
 	height: 95vh;
+
+	.logo {
+		align-self: center img {
+			display: block;
+			margin: 0 auto;
+		}
+	}
 }
