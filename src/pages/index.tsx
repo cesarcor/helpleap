@@ -1,7 +1,9 @@
 import Head from 'next/head';
 import styles from '@/styles/Home.module.scss';
 import Layout from '@/components/layout/layout';
+import TicketListToolbar from '@/components/tickets/ticket-list-toolbar/ticket-list-toolbar';
 import TicketList from '@/components/tickets/ticket-list/ticket-list';
+import SingleTicketHeader from '@/components/tickets/single-ticket/single-ticket-header/single-ticket-header';
 
 export default function Home() {
 	return (
@@ -14,6 +16,7 @@ export default function Home() {
 			</Head>
 
 			<Layout>
+				<TicketListToolbar />
 				<TicketList />
 			</Layout>
 		</>
