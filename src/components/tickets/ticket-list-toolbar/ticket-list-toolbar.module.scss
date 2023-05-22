@@ -1,0 +1,16 @@
+.ticket_list_toolbar {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+
+	.left,
+	.right {
+		display: inherit;
+		column-gap: 10px;
+	}
+
+	.right {
+		position: relative;
+		right: 2px;
+	}
+}
