@@ -1,0 +1,119 @@
+.user_info {
+	display: flex;
+	column-gap: 10px;
+	align-items: center;
+
+	&__content {
+		position: relative;
+
+		.user_info__name {
+			cursor: pointer;
+			display: flex;
+
+			h3 {
+				font-size: 0.85em;
+			}
+
+			.online_status {
+				font-size: 0.7em;
+			}
+
+			svg {
+				width: 20px;
+			}
+		}
+
+		.user_status_icon {
+			margin-right: 5px;
+			display: inline-block;
+			width: 5px;
+			height: 5px;
+			border-radius: 50%;
+
+			&.user_status_icon__online {
+				background-color: var(--green);
+			}
+
+			&.user_status_icon__unavailable {
+				background-color: var(--primary-orange);
+			}
+
+			&.user_status_icon__offline {
+				background-color: var(--gray-blue);
+			}
+		}
+
+		.user_info__dropdown {
+			background-color: #ffffff;
+			position: absolute;
+			top: 45px;
+			right: 0px;
+			padding: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+			width: 200px;
+			z-index: 10;
+
+			.dropdown_row {
+				position: relative;
+
+				.user_status_list {
+					border-bottom: 1px solid var(--gray-blue);
+					li {
+						button {
+							display: flex;
+							align-items: center;
+							column-gap: 10px;
+							width: 100%;
+							padding: 10px 5px;
+							border: none;
+							background-color: transparent;
+							cursor: pointer;
+
+							&:hover {
+								background-color: #f5f5f5;
+							}
+
+							svg {
+								color: var(--primary-orange);
+							}
+						}
+					}
+				}
+
+				.user_control_list {
+					li {
+						display: flex;
+						align-items: center;
+						column-gap: 10px;
+						width: 100%;
+						padding: 10px 5px;
+						border: none;
+						background-color: transparent;
+						cursor: pointer;
+						font-size: 0.85em;
+
+						&:hover {
+							background-color: #f5f5f5;
+						}
+
+						svg {
+							color: var(--primary-orange);
+						}
+					}
+				}
+			}
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: -15px;
+				right: 0;
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 0 15px 30px 15px;
+				border-color: transparent transparent #ffffff transparent;
+			}
+		}
+	}
+}
