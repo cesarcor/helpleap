@@ -3,4 +3,31 @@
 	border: 1px solid var(--gray-blue);
 	border-radius: 4px;
 	padding: 10px;
+
+	&__list {
+		li {
+			font-size: 0.85em;
+			padding: 10px 0;
+
+			a {
+				display: flex;
+				align-items: center;
+				column-gap: 10px;
+
+				svg {
+					width: 2.5em;
+					height: 2.5em;
+					color: var(--green);
+				}
+
+				&:hover {
+					color: var(--primary-orange);
+				}
+			}
+
+			&:not(:last-of-type) {
+				border-bottom: 1px solid var(--gray-blue);
+			}
+		}
+	}
 }
