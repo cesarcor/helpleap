@@ -1,9 +1,12 @@
 import styles from './auto-response.module.scss';
 import Button from '@/components/common-ui/button/button';
+import Recipient from '../recipient/recipient';
 
 const AutoResponse = () => {
 	return (
 		<div className={styles.auto_response}>
+			<Recipient />
+
 			<div className={styles.auto_response_status}>
 				<div>
 					<span>
