@@ -1,0 +1,35 @@
+.recipient_input {
+	border: none;
+	outline: none;
+	padding: 5px;
+}
+
+.emailList {
+	display: flex;
+	flex-wrap: nowrap;
+	gap: 5px;
+}
+
+.email {
+	display: inline-flex;
+	align-items: center;
+	padding: 5px 10px;
+	border-radius: 20px;
+	border: 1px solid var(--gray-blue);
+	font-size: 0.9em;
+}
+
+.removeButton {
+	margin-left: 5px;
+	background: none;
+	border: none;
+	color: #888;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.recipientInput {
+	margin-top: 10px;
+	padding: 5px 10px;
+	border-radius: 5px;
+}
