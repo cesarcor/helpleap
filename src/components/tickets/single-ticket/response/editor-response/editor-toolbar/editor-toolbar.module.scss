@@ -1,0 +1,14 @@
+.editor_toolbar {
+	display: flex;
+	position: relative;
+	column-gap: 10px;
+	align-items: center;
+	margin-bottom: 15px;
+	padding: 10px 0;
+	border-bottom: 1px solid var(--gray-blue);
+
+	button {
+		position: absolute;
+		right: 0;
+	}
+}
