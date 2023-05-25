@@ -4,6 +4,7 @@ import classNames from 'classnames';
 interface ButtonProps {
 	text: string;
 	type: string;
+	onClickAction?: () => void;
 }
 
 const Button = (props: ButtonProps) => {
@@ -13,7 +14,12 @@ const Button = (props: ButtonProps) => {
 	);
 
 	return (
-		<button className={`${styles.button} ${buttonType}`}>{props.text}</button>
+		<button
+			className={`${styles.button} ${buttonType}`}
+			onClick={props.onClickAction}
+		>
+			{props.text}
+		</button>
 	);
 };
 
