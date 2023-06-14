@@ -26,6 +26,18 @@
 		border-bottom: 1px solid var(--gray-blue);
 		z-index: 10;
 
+		.options_search {
+			margin: 10px 0;
+
+			&__input {
+				width: 100%;
+				border: 1px solid var(--gray-blue);
+				border-radius: 4px;
+				padding: 6px 10px;
+				outline: none;
+			}
+		}
+
 		.options_list {
 			li {
 				padding: 5px 5px;

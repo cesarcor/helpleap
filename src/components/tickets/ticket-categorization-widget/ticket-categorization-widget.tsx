@@ -9,14 +9,17 @@ const TicketCategorizationWidget = () => {
 				<Select
 					selectTitle='Group'
 					selectOptions={['Tier 1', 'Tier 2', 'Customer Support']}
+					hasSearch
 				/>
 				<Select
 					selectTitle='Assignment'
 					selectOptions={['AI', 'John Doe', 'Mary Doe', 'Richard Richardson']}
+					hasSearch
 				/>
 				<Select
 					selectTitle='Tags'
 					selectOptions={['Shipping', 'Priority Customer']}
+					hasSearch
 				/>
 			</div>
 		</Box>
