@@ -2,7 +2,17 @@ import styles from './auto-response.module.scss';
 import Button from '@/components/common-ui/button/button';
 import Recipient from '../recipient/recipient';
 
-const AutoResponse = () => {
+type VisibilitySwitchHandler = (visibility: string) => void;
+
+const AutoResponse = ({
+	onVisibilitySwitch,
+}: {
+	onVisibilitySwitch: VisibilitySwitchHandler;
+}) => {
+	const handleVisibilitySwitch = () => {
+		onVisibilitySwitch('editor');
+	};
+
 	return (
 		<div className={styles.auto_response}>
 			<Recipient />
@@ -14,7 +24,11 @@ const AutoResponse = () => {
 					</span>
 					<Button text='Send Now' type='white' />
 				</div>
-				<Button text='Edit Response' type='white' />
+				<Button
+					text='Edit Response'
+					type='white'
+					onClick={handleVisibilitySwitch}
+				/>
 			</div>
 
 			<div className={styles.auto_response_content}>

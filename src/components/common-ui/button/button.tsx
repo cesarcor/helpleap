@@ -4,21 +4,18 @@ import classNames from 'classnames';
 interface ButtonProps {
 	text: string;
 	type: string;
-	onClickAction?: () => void;
+	onClick?: () => void;
 }
 
-const Button = (props: ButtonProps) => {
+const Button = ({ text, type, onClick }: ButtonProps) => {
 	const buttonType = classNames(
-		{ [styles.button__default]: props.type === 'default' },
-		{ [styles.button__white]: props.type === 'white' }
+		{ [styles.button__default]: type === 'default' },
+		{ [styles.button__white]: type === 'white' }
 	);
 
 	return (
-		<button
-			className={`${styles.button} ${buttonType}`}
-			onClick={props.onClickAction}
-		>
-			{props.text}
+		<button className={`${styles.button} ${buttonType}`} onClick={onClick}>
+			{text}
 		</button>
 	);
 };

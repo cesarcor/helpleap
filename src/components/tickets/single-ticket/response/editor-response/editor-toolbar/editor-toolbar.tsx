@@ -6,11 +6,7 @@ interface ToolBarProps {
 }
 
 const EditorToolBar = (props: ToolBarProps) => {
-	return (
-		<div className={styles.editor_toolbar}>
-			{props.children} <Button type='default' text='Auto Response' />
-		</div>
-	);
+	return <div className={styles.editor_toolbar}>{props.children}</div>;
 };
 
 export default EditorToolBar;

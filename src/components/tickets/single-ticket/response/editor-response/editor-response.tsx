@@ -13,14 +13,25 @@ import EditorButton from './editor-toolbar/editor-button/editor-button';
 import EditorIcon from './editor-toolbar/editor-icon/editor-icon';
 import Recipient from '../recipient/recipient';
 import EditorSend from './editor-send/editor-send';
+import Button from '@/components/common-ui/button/button';
 
 const LIST_TYPES = ['numbered-list', 'bulleted-list'];
 const TEXT_ALIGN_TYPES = ['left', 'center', 'right', 'justify'];
 
-const EditorResponse = () => {
+type VisibilitySwitchHandler = (visibility: string) => void;
+
+const EditorResponse = ({
+	onVisibilitySwitch,
+}: {
+	onVisibilitySwitch: VisibilitySwitchHandler;
+}) => {
 	const renderElement = useCallback((props) => <Element {...props} />, []);
 	const renderLeaf = useCallback((props) => <Leaf {...props} />, []);
 	const editor = useMemo(() => withHistory(withReact(createEditor())), []);
+
+	const handleVisibilitySwitch = () => {
+		onVisibilitySwitch('auto');
+	};
 
 	return (
 		<Slate editor={editor} value={initialValue}>
@@ -40,6 +51,11 @@ const EditorResponse = () => {
 				<BlockButton format='center' icon='format_align_center' />
 				<BlockButton format='right' icon='format_align_right' />
 				<BlockButton format='justify' icon='format_align_justify' />
+				<Button
+					type='default'
+					text='Auto Response'
+					onClick={handleVisibilitySwitch}
+				/>
 			</EditorToolBar>
 			<Editable
 				renderElement={renderElement}
