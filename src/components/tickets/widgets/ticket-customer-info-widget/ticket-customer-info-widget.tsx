@@ -1,6 +1,6 @@
 import styles from './ticket-customer-info-widget.module.scss';
 import Box from '@/components/common-ui/box/box';
-import CustomerAvatar from '../customer-avatar/customer-avatar';
+import CustomerAvatar from '../../customer-avatar/customer-avatar';
 import CustomerDetails from './customer-details/customer-details';
 import { CustomerOtherTickets } from './customer-other-tickets/customer-other-tickets';
 

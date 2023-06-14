@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './layout.module.scss';
 import { Open_Sans } from 'next/font/google';
-import MainSidebar from '@/components/main-sidebar/main-sidebar';
-import SecondarySidebar from '@/components/secondary-sidebar/secondary-sidebar';
+import MainSidebar from '@/components/layout/main-sidebar/main-sidebar';
+import SecondarySidebar from '@/components/layout/secondary-sidebar/secondary-sidebar';
 
 const open_sans = Open_Sans({
 	weight: ['400', '500', '600', '700'],

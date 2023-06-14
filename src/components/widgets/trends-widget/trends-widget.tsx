@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './trends-widget.module.scss';
 import Link from 'next/link';
-import SmileSVG from '../svgs/common/smile-svg';
+import SmileSVG from '../../svgs/common/smile-svg';
 
 const TrendsWidget = () => {
 	return (

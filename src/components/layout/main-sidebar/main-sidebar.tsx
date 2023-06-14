@@ -1,5 +1,5 @@
 import React from 'react';
-import NavigationMenu from '../navigation-menu/navigation-menu';
+import NavigationMenu from '../../navigation-menu/navigation-menu';
 import styles from './main-sidebar.module.scss';
 import Image from 'next/image';
 

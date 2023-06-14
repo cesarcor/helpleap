@@ -1,10 +1,10 @@
 import styles from './secondary-sidebar.module.scss';
-import TrendsWidget from '../trends-widget/trends-widget';
-import TicketCategorizationWidget from '../tickets/ticket-categorization-widget/ticket-categorization-widget';
+import TrendsWidget from '../../widgets/trends-widget/trends-widget';
+import TicketCategorizationWidget from '../../tickets/widgets/ticket-categorization-widget/ticket-categorization-widget';
 import { useRouter } from 'next/router';
-import TicketCustomerInfoWidget from '../tickets/ticket-customer-info-widget/ticket-customer-info-widget';
-import Notifications from '../notifications/notifications';
-import UserInfo from '../user-info/user-info';
+import TicketCustomerInfoWidget from '../../tickets/widgets/ticket-customer-info-widget/ticket-customer-info-widget';
+import Notifications from '../../notifications/notifications';
+import UserInfo from '../../user-info/user-info';
 
 const SecondarySidebar = () => {
 	const router = useRouter();

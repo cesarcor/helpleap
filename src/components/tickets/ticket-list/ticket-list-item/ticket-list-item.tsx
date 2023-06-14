@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from './ticket-list-item.module.scss';
-import CustomerAvatar from '../customer-avatar/customer-avatar';
-import Badge from '../../common-ui/badge/badge';
-import TicketInterventionStatus from '../ticket-intervention-status/ticket-intervention-status';
-import AssignedUser from '../assigned-user/assigned-user';
-import TicketItemViewing from '../ticket-item-viewing/ticket-item-viewing';
+import CustomerAvatar from '../../customer-avatar/customer-avatar';
+import Badge from '../../../common-ui/badge/badge';
+import TicketInterventionStatus from '../../ticket-intervention-status/ticket-intervention-status';
+import AssignedUser from '../../assigned-user/assigned-user';
+import TicketItemViewing from '../../ticket-item-viewing/ticket-item-viewing';
 import classNames from 'classnames';
 import Link from 'next/link';
 

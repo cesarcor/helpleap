@@ -2,8 +2,8 @@ import Head from 'next/head';
 import styles from '@/styles/Home.module.scss';
 import Heading from '@/components/common-ui/heading/heading';
 import Layout from '@/components/layout/layout';
-import TicketListToolbar from '@/components/tickets/ticket-list-toolbar/ticket-list-toolbar';
-import TicketList from '@/components/tickets/ticket-list/ticket-list';
+import TicketListToolbar from '@/components/tickets/ticket-list/ticket-list-toolbar/ticket-list-toolbar';
+import TicketList from '@/components/tickets/ticket-list/ticket-list/ticket-list';
 import SingleTicketHeader from '@/components/tickets/single-ticket/single-ticket-header/single-ticket-header';
 
 export default function Home() {
