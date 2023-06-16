@@ -6,10 +6,16 @@
 		&_item {
 			margin-bottom: 15px;
 			font-size: 0.85em;
+			border-radius: 4px;
+
+			&:hover,
+			&.active_menu {
+				color: #ffffff;
+				background-color: var(--primary-orange);
+			}
 
 			a {
 				padding: 0.7em 1em;
-				border-radius: 4px;
 				display: flex;
 				align-items: center;
 				column-gap: 5px;
@@ -17,11 +23,6 @@
 				svg {
 					width: 1em;
 					height: 1em;
-				}
-
-				&:hover {
-					color: #ffffff;
-					background-color: var(--primary-orange);
 				}
 			}
 		}

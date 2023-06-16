@@ -1,39 +1,42 @@
 import React from 'react';
 import styles from './navigation-menu.module.scss';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import TicketsSVG from '../svgs/navigation/tickets-svg';
 import CustomersSVG from '../svgs/navigation/customers-svg';
 import TrendsSVG from '../svgs/navigation/trends-svg';
 import SettingsSVG from '../svgs/navigation/settings-svg';
 
+const menuItems = [
+	{ path: '/', label: 'Tickets', icon: <TicketsSVG /> },
+	{ path: '/customers', label: 'Customers', icon: <CustomersSVG /> },
+	{ path: '/trends', label: 'Trends', icon: <TrendsSVG /> },
+	{ path: '/settings', label: 'Settings', icon: <SettingsSVG /> },
+];
+
 const NavigationMenu = () => {
+	const router = useRouter();
+
+	const isActive = (href: string) => {
+		return router.pathname === href;
+	};
+
 	return (
 		<nav className={`${styles.nav_menu}`}>
 			<ul className={`${styles.nav_menu__list}`}>
-				<li className={`${styles.nav_menu__list_item}`}>
-					<Link href='/'>
-						<TicketsSVG />
-						Tickets
-					</Link>
-				</li>
-				<li className={`${styles.nav_menu__list_item}`}>
-					<Link href='/customers'>
-						<CustomersSVG />
-						Customers
-					</Link>
-				</li>
-				<li className={`${styles.nav_menu__list_item}`}>
-					<Link href='/trends'>
-						<TrendsSVG />
-						Trends
-					</Link>
-				</li>
-				<li className={`${styles.nav_menu__list_item}`}>
-					<Link href='/settings'>
-						<SettingsSVG />
-						Settings
-					</Link>
-				</li>
+				{menuItems.map((item) => (
+					<li
+						key={item.path}
+						className={`${styles.nav_menu__list_item} ${
+							isActive(item.path) && styles.active_menu
+						}`}
+					>
+						<Link href={item.path}>
+							{item.icon}
+							{item.label}
+						</Link>
+					</li>
+				))}
 			</ul>
 		</nav>
 	);
