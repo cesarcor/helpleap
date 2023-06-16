@@ -4,7 +4,7 @@ import Select from '@/components/common-ui/select/select';
 
 const TicketCategorizationWidget = () => {
 	return (
-		<Box>
+		<Box margin_bottom='10px'>
 			<div className={styles.ticketCategorizationWidget}>
 				<Select
 					selectTitle='Group'
