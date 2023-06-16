@@ -1,0 +1,23 @@
+.log_item {
+	display: flex;
+	justify-content: right;
+	font-size: 0.75em;
+
+	&__actor {
+		font-weight: 700;
+		color: var(--info-blue);
+	}
+
+	&__datetime {
+		&::before {
+			content: '';
+			display: inline-block;
+			width: 1px;
+			height: 1.1em;
+			margin: 0 8px;
+			position: relative;
+			top: 1px;
+			background-color: var(--gray-blue);
+		}
+	}
+}
