@@ -1,34 +1,53 @@
 import React from 'react';
 import styles from './badge.module.scss';
 import classNames from 'classnames';
+import CloseSVG from '../../svgs/common/close-svg';
 
 interface BadgeProps {
 	text: string;
 	type?: string | undefined;
 	shapeSquare?: boolean | undefined;
 	size?: string | undefined;
+	hasClose?: boolean | undefined;
+	hasMargin?: boolean | undefined;
+	onClose?: (text: string) => void;
 }
 
-const Badge = (props: BadgeProps) => {
+const Badge = ({
+	text,
+	type,
+	shapeSquare,
+	size,
+	hasClose,
+	onClose,
+}: BadgeProps) => {
 	const badgeType = classNames(
-		{ [styles.badge__high]: props.type === 'high' },
-		{ [styles.badge__medium]: props.type === 'medium' },
-		{ [styles.badge__low]: props.type === 'low' },
-		{ [styles.badge__neutral]: props.type === 'neutral' },
-		{ [styles.badge__info]: props.type === 'info' }
+		{ [styles.badge__high]: type === 'high' },
+		{ [styles.badge__medium]: type === 'medium' },
+		{ [styles.badge__low]: type === 'low' },
+		{ [styles.badge__neutral]: type === 'neutral' },
+		{ [styles.badge__info]: type === 'info' }
 	);
 
 	const badgeShape = classNames({
-		[styles.badge_shape__square]: props.shapeSquare === true,
+		[styles.badge_shape__square]: shapeSquare === true,
 	});
 
 	const badgeSize = classNames({
-		[styles.badge_size__sm]: props.size === 'sm',
+		[styles.badge_size__sm]: size === 'sm',
 	});
 
 	return (
 		<span className={`${styles.badge} ${badgeType} ${badgeShape} ${badgeSize}`}>
-			{props.text}
+			{text}
+			{hasClose && (
+				<button
+					className={styles.close_btn}
+					onClick={() => onClose && onClose(text)}
+				>
+					<CloseSVG />
+				</button>
+			)}
 		</span>
 	);
 };

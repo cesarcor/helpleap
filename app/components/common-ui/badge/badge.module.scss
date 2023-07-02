@@ -7,6 +7,13 @@
 	display: inline-flex;
 	align-items: center;
 
+	.close_btn {
+		background-color: transparent;
+		border: none;
+		outline: none;
+		cursor: pointer;
+	}
+
 	&.badge_shape__square {
 		border-radius: 0;
 	}
