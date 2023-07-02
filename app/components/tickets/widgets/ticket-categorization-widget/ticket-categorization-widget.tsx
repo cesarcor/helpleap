@@ -10,16 +10,27 @@ const TicketCategorizationWidget = () => {
 					selectTitle='Group'
 					selectOptions={['Tier 1', 'Tier 2', 'Customer Support']}
 					hasSearch
+					initialOption='Tier 1'
 				/>
 				<Select
 					selectTitle='Assignment'
 					selectOptions={['AI', 'John Doe', 'Mary Doe', 'Richard Richardson']}
 					hasSearch
+					initialOption='AI'
 				/>
 				<Select
 					selectTitle='Tags'
-					selectOptions={['Shipping', 'Priority Customer']}
+					selectOptions={[
+						'Shipping',
+						'Priority Customer',
+						'Bug',
+						'Feature',
+						'Other',
+						'Product Purchase',
+					]}
 					hasSearch
+					isMultiselect
+					initialOption='Priority Customer'
 				/>
 			</div>
 		</Box>

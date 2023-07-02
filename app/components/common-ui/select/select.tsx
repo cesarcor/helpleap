@@ -1,20 +1,72 @@
 'use client';
 
 import { useState, useEffect, useRef, ChangeEvent } from 'react';
+import Badge from '../badge/badge';
 import styles from './select.module.scss';
 
 interface SelectProps {
 	selectTitle: string;
 	selectOptions: string[];
+	initialOption: string;
 	hasSearch?: boolean;
+	isMultiselect?: boolean;
 }
 
-const Select = ({ selectTitle, selectOptions, hasSearch }: SelectProps) => {
+const Select = ({
+	selectTitle,
+	selectOptions,
+	initialOption,
+	hasSearch,
+	isMultiselect,
+}: SelectProps) => {
 	const [isOpen, setIsOpen] = useState<boolean>(false);
-	const [selectedOption, setSelectedOption] = useState<string>('Select');
+	const [selectedOption, setSelectedOption] = useState<string | string[]>([
+		initialOption,
+	]);
 	const [filteredOptions, setFilteredOptions] =
 		useState<string[]>(selectOptions);
 	const selectRef = useRef<HTMLDivElement>(null);
+
+	const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
+		const input = event.target.value;
+		const filtered = selectOptions.filter((option) =>
+			option.toLowerCase().includes(input.toLowerCase())
+		);
+		setFilteredOptions(filtered);
+	};
+
+	const handleOptionClick = (option: string) => {
+		if (!isMultiselect) {
+			setSelectedOption(option);
+		} else {
+			if (!selectedOption.includes(option)) {
+				setSelectedOption([...selectedOption, option]);
+			}
+		}
+		setIsOpen(false);
+	};
+
+	const handleBadgeClose = (option: string) => {
+		if (isMultiselect) {
+			const updatedOptions = (selectedOption as string[]).filter(
+				(selected: string) => selected !== option
+			);
+			setSelectedOption(updatedOptions);
+		}
+	};
+
+	const outputSelectedOption = () => {
+		return isMultiselect
+			? (selectedOption as string[]).map((option: string) => (
+					<Badge
+						key={option}
+						text={option}
+						hasClose
+						onClose={handleBadgeClose}
+					/>
+			  ))
+			: selectedOption;
+	};
 
 	useEffect(() => {
 		const handleClickOutside = (event: MouseEvent) => {
@@ -33,19 +85,6 @@ const Select = ({ selectTitle, selectOptions, hasSearch }: SelectProps) => {
 		};
 	}, []);
 
-	const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
-		const input = event.target.value;
-		const filtered = selectOptions.filter((option) =>
-			option.toLowerCase().includes(input.toLowerCase())
-		);
-		setFilteredOptions(filtered);
-	};
-
-	const handleOptionClick = (option: string) => {
-		setSelectedOption(option);
-		setIsOpen(false);
-	};
-
 	return (
 		<div className={styles.select_field} ref={selectRef}>
 			<div
@@ -53,7 +92,7 @@ const Select = ({ selectTitle, selectOptions, hasSearch }: SelectProps) => {
 				onClick={() => setIsOpen(!isOpen)}
 			>
 				<span className={styles.select_title}>{selectTitle}: </span>
-				<span className={styles.select_value}>{selectedOption}</span>
+				<span className={styles.select_value}>{outputSelectedOption()}</span>
 			</div>
 			<div
 				className={`${styles.options_box} ${
