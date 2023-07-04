@@ -11,12 +11,14 @@ const TicketListToolbar = () => {
 				<Select
 					selectTitle='Sorting'
 					selectOptions={['Newest', 'Oldest', 'Priority']}
+					initialOption='Newest'
 				/>
 			</div>
 			<div className={styles.right}>
 				<Select
 					selectTitle='Filter'
 					selectOptions={['All', 'Open', 'Closed', 'Pending']}
+					initialOption='All'
 				/>
 				<Search />
 			</div>
