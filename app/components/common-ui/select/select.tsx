@@ -86,7 +86,12 @@ const Select = ({
 	}, []);
 
 	return (
-		<div className={styles.select_field} ref={selectRef}>
+		<div
+			className={`${styles.select_field} ${
+				isMultiselect ? styles.is_multiselect : ''
+			}`}
+			ref={selectRef}
+		>
 			<div
 				className={styles.select_field_input}
 				onClick={() => setIsOpen(!isOpen)}

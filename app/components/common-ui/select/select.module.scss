@@ -2,12 +2,19 @@
 	font-size: 0.85em;
 	position: relative;
 
+	&.is_multiselect {
+		.select_field_input {
+			white-space: normal;
+		}
+	}
+
 	&_input {
 		border: 1px solid var(--gray-blue);
 		border-radius: 4px;
 		padding: 6px 10px;
 		outline: none;
 		cursor: pointer;
+		white-space: nowrap;
 
 		.select_title {
 			color: var(--gray-blue);
