@@ -1,4 +1,5 @@
 import styles from './search.module.scss';
+import SearchSVG from '../svgs/common/search-svg';
 
 const Search = () => {
 	return (
@@ -8,6 +9,7 @@ const Search = () => {
 				className={styles.search_input}
 				placeholder='Search...'
 			/>
+			<SearchSVG />
 		</div>
 	);
 };
