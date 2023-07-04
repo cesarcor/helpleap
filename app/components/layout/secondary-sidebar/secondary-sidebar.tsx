@@ -7,6 +7,7 @@ import { usePathname } from 'next/navigation';
 import TicketCustomerInfoWidget from '../../tickets/widgets/ticket-customer-info-widget/ticket-customer-info-widget';
 import Notifications from '../../notifications/notifications';
 import UserInfo from '../../user-info/user-info';
+import SearchWidget from '../../widgets/search-widget/search-widget';
 
 const SecondarySidebar = () => {
 	const pathname = usePathname();
@@ -23,6 +24,7 @@ const SecondarySidebar = () => {
 				</div>
 
 				{currentRoute === '/' ? <TrendsWidget /> : ''}
+				{currentRoute === '/ticket/1' ? <SearchWidget /> : ''}
 				{currentRoute === '/ticket/1' ? <TicketCategorizationWidget /> : ''}
 				{currentRoute === '/ticket/1' ? <TicketCustomerInfoWidget /> : ''}
 			</div>
